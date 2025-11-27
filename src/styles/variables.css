@@ -1,0 +1,33 @@
+:root {
+  /* Core Brand Palette */
+  --brand-primary: #4f46e5;
+  --brand-primary-strong: #4338ca;
+  --brand-primary-soft: rgba(79, 70, 229, 0.18);
+  --brand-secondary: #38bdf8;
+  --brand-secondary-soft: rgba(56, 189, 248, 0.16);
+
+  /* Semantic Colors */
+  --color-success: #22c55e;
+  --color-danger: #f87171;
+  --color-warning: #facc15;
+
+  /* Neutral Scale */
+  --color-bg-base: #0b1120;
+  --color-bg-surface: #111c34;
+  --color-bg-surface-elevated: #15213f;
+  --color-bg-muted: #1e293b;
+  --color-border: rgba(148, 163, 184, 0.15);
+
+  /* Typography */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5f5;
+  --color-text-muted: #94a3b8;
+
+  /* Shadows & Radii */
+  --card-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.45);
+  --card-shadow-hover: 0 16px 32px -2px rgba(15, 23, 42, 0.55);
+  --border-radius: 16px;
+
+  /* Motion */
+  --transition-default: all 0.25s ease;
+}

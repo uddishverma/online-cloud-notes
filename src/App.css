@@ -1,0 +1,9 @@
+/**
+ * App Component Styles
+ * Global application styles
+ */
+
+.App {
+  min-height: 100vh;
+  width: 100%;
+}

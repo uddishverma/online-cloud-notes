@@ -1,0 +1,134 @@
+.note {
+  background: var(--color-bg-surface);
+  border-radius: calc(var(--border-radius) * 1.1);
+  padding: 1.8rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: noteAppear 0.35s ease-out forwards;
+  color: var(--color-text-primary);
+  transform: translateZ(0);
+  will-change: transform;
+  cursor: pointer;
+}
+
+.note::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.18), rgba(56, 189, 248, 0.12));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+.note:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(79, 70, 229, 0.35);
+}
+
+.note:hover::before {
+  opacity: 1;
+}
+
+.note-header {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.note-title {
+  font-size: 1.45rem;
+  margin: 0;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.note-content {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.note-content p {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.note-more-indicator {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.65rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.note-action-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-default);
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--color-text-secondary);
+}
+
+.note-action-button:hover {
+  transform: translateY(-2px);
+  background: rgba(148, 163, 184, 0.22);
+}
+
+.note-view-button,
+.note-edit-button {
+  background: var(--brand-primary-soft);
+  color: var(--color-text-primary);
+}
+
+.note-view-button:hover,
+.note-edit-button:hover {
+  background: rgba(79, 70, 229, 0.28);
+}
+
+.note-delete-button {
+  background: rgba(248, 113, 113, 0.14);
+  color: var(--color-danger);
+}
+
+.note-delete-button:hover {
+  background: rgba(248, 113, 113, 0.24);
+}
+
+@keyframes noteAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .note {
+    animation: none;
+  }
+
+  .note-action-button {
+    transition: none;
+  }
+}

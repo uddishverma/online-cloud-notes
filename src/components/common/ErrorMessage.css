@@ -1,0 +1,57 @@
+.error-message-component {
+  margin: 1.5rem auto;
+  max-width: 600px;
+  animation: errorSlideIn 0.3s ease-out;
+}
+
+.error-message-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  color: var(--color-danger);
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  backdrop-filter: blur(6px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.error-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.error-text {
+  flex: 1;
+}
+
+.error-dismiss-button {
+  background: transparent;
+  border: none;
+  color: var(--color-danger);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.error-dismiss-button:hover {
+  background: rgba(248, 113, 113, 0.18);
+}
+
+@keyframes errorSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
